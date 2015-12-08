@@ -1,0 +1,106 @@
+
+StateMachine: Migration_SM
+
+	region: Region0
+
+		states: 
+			SetNextSite-Loop, Initial, HasMoved, ReadyToMove, Final
+
+		transitions: 
+			tr: InitialToSetNextSite-Loop
+				from: Initial to: SetNextSite-Loop
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: cleaningBeforMovingActivity
+					action: deleteLocalSiteFromItinerary
+						stereotype: DomainAction
+
+					action: leaveLibraryManagementGroup
+						stereotype: LeaveGroup
+
+
+
+			tr: HasMovedToSetNextSite-Loop
+				from: HasMoved to: SetNextSite-Loop
+
+				trigger's event: not specified
+				
+				guard: hasNotMoved
+
+				effect: 
+					name: tryingToMoveToAnotherSiteActivity
+					action: logTheReason
+						stereotype: DomainAction
+
+					action: deleteNextSiteFromItinerary
+						stereotype: DomainAction
+
+
+
+			tr: SetNextSite-LoopToReadyToMove_1
+				from: SetNextSite-Loop to: ReadyToMove
+
+				trigger's event: not specified
+				
+				guard: isItineraryNotEmpty
+
+				effect: 
+					name: settingFirstSiteAsNextSiteActivity
+					action: firstSiteInItinerayBecomeNextSite
+						stereotype: DomainAction
+
+
+
+			tr: SetNextSite-LoopToReadyToMove_2
+				from: SetNextSite-Loop to: ReadyToMove
+
+				trigger's event: not specified
+				
+				guard: isItineraryEmpty
+
+				effect: 
+					name: settingFinalSiteAsNextSiteActivity
+					action: finalSiteInItineraryBecomeNextSite
+						stereotype: DomainAction
+
+
+
+			tr: HasMovedToFinal
+				from: HasMoved to: Final
+
+				trigger's event: not specified
+				
+				guard: hasMoved
+
+				effect: not specified
+
+			tr: ReadyToMoveToHasMoved
+				from: ReadyToMove to: HasMoved
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: movingActivity
+					action: jumpToNextSite
+						stereotype: Jump
+
+
+
+
+
+StateMachine: AfterMigration_SM
+
+	region: Region0
+
+		states: 
+			notSpecified
+
+		transitions: 
+			notSpecified
+

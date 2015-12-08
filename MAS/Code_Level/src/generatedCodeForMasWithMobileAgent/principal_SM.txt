@@ -1,0 +1,432 @@
+
+StateMachine: ResultsDeliver_SM
+
+	region: Region0
+
+		states: 
+			DeliverResults, Final, Initial
+
+		transitions: 
+			tr: DeliverResultsToFinal
+				from: DeliverResults to: Final
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: ResultsDeliveringActivity
+					action: sendEndOfResultsDeliverRole
+						stereotype: SendMessage
+							itsPreviousReceive: not specified
+							signal: endOfResultsDeliverRoleSignal
+							target: MobileBookSeeker
+
+					action: displayBookRepositories
+						stereotype: DomainAction
+
+
+
+			tr: IntialToDeliverResults
+				from: Initial to: DeliverResults
+
+
+
+
+StateMachine: BookChecker_SM
+
+	region: Region0
+
+		states: 
+			WaitingForLocalBooksList, Final, Initial
+
+		transitions: 
+			tr: WaitingForLocalBooksListToFinal
+				from: WaitingForLocalBooksList to: Final
+
+				trigger's event: BooksListEvent					stereotype: ReceiveMessage
+						itsPreviousSend: not specified
+					signal: BooksListSignal
+						booksList : Book{0, -1}
+				
+				guard: not specified
+
+				effect: 
+					name: BooksFilteringActivity
+					action: booksFilter
+						stereotype: DomainAction
+
+					action: sendEndOfBookCheckerRole
+						stereotype: SendMessage
+							itsPreviousReceive: not specified
+							signal: endOfBookCheckerRoleSignal
+							target: MobileBookSeeker
+
+
+
+			tr: InitialToWaitingForLocalBooksList
+				from: Initial to: WaitingForLocalBooksList
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: MessageSendingActivity
+					action: sendGetBooksList
+						stereotype: SendMessage
+							itsPreviousReceive: not specified
+							signal: GetBooksListSignal
+							target: Librarian
+
+
+
+
+
+StateMachine: BooksListDeliver_SM
+
+	region: Region0
+
+		states: 
+			Intial, BooksListDelivering-Loop, Final
+
+		transitions: 
+			tr: BooksListDelivering-LoopToFinal
+				from: BooksListDelivering-Loop to: Final
+
+				trigger's event: not specified
+				
+				guard: isStopTrue
+
+				effect: 
+					name: Ending
+					action: sendEndOfBooksListDeliverRole
+						stereotype: SendMessage
+							itsPreviousReceive: not specified
+							signal: endOfBooksListDeliverRoleSignal
+							target: Librarian
+
+
+
+			tr: InitialToBooksListDelivering-Loop
+				from: Intial to: BooksListDelivering-Loop
+
+
+			tr: BooksListDelivering-LoopToBooksListDelivering-Loop
+				from: BooksListDelivering-Loop to: BooksListDelivering-Loop
+
+				trigger's event: GetBooksListEvent					stereotype: ReceiveMessage
+						itsPreviousSend: not specified
+					signal: GetBooksListSignal
+						sender : MobileBookSeeker{1, 1}
+				
+				guard: isStopFalse
+
+				effect: 
+					name: BooksListSendingActivity
+					action: sendBooksList
+						stereotype: SendMessage
+							itsPreviousReceive: not specified
+							signal: BooksListSignal
+							target: MobileBookSeeker
+
+
+
+
+
+StateMachine: MobileBookSeeker_SM
+
+	region: Region0
+
+		states: 
+			WaitForResultsDeliverRoleEnding, IsMigrantAgent, Final, IsResultsDeliverRoleObtained, IsBookCheckerRoleObtained, WaitForBookCheckerRoleEnding, BookCheckerRole-Loop, LibraryManagementGroup-Loop, Initial, IsMissionTeminated, IsLibraryManagementGroupJoined, ResultsDeliverRole-Loop
+
+		transitions: 
+			tr: WaitForResultsDeliverRoleEndingToFinal
+				from: WaitForResultsDeliverRoleEnding to: Final
+
+				trigger's event: endOfResultsDeliverRoleEvent					stereotype: EndRole
+						
+					signal: endOfResultsDeliverRoleSignal
+				
+				guard: not specified
+
+				effect: 
+					name: leavingGroupActivity
+					action: leaveLibraryManagementGroup
+						stereotype: LeaveGroup
+
+
+
+			tr: IsBookCheckerRoleObtainedToWaitForBookCheckerRoleEnding
+				from: IsBookCheckerRoleObtained to: WaitForBookCheckerRoleEnding
+
+				trigger's event: not specified
+				
+				guard: isRoleObtained
+
+				effect: 
+					name: BookCheckerRoleActivatingActivity
+					action: startBookCheckerRole
+						stereotype: ActivateRole
+
+
+
+			tr: IsBookCheckerRoleObtainedToBookCheckerRole-Loop
+				from: IsBookCheckerRoleObtained to: BookCheckerRole-Loop
+
+				trigger's event: not specified
+				
+				guard: isRoleNotObtained
+
+				effect: not specified
+
+			tr: InitialToIsMigrantAgent
+				from: Initial to: IsMigrantAgent
+
+
+			tr: IsLibraryManagementGroupJoinedToLibraryManagementGroup-Loop
+				from: IsLibraryManagementGroupJoined to: LibraryManagementGroup-Loop
+
+				trigger's event: not specified
+				
+				guard: isGroupNotJoined
+
+				effect: not specified
+
+			tr: IsLibraryManagementGroupJoinedToIsMissionTerminated
+				from: IsLibraryManagementGroupJoined to: IsMissionTeminated
+
+				trigger's event: not specified
+				
+				guard: isGroupJoined
+
+				effect: not specified
+
+			tr: IsMigrantAgentToLibraryManagementGroup-Loop_1
+				from: IsMigrantAgent to: LibraryManagementGroup-Loop
+
+				trigger's event: not specified
+				
+				guard: isNotMigrantAgent
+
+				effect: not specified
+
+			tr: ResultsDeliverRole-LoopToIsResultsDeliverRoleObtained
+				from: ResultsDeliverRole-Loop to: IsResultsDeliverRoleObtained
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: askingForResultsDeliverRoleActivity
+					action: askForResultsDeliverRole
+						stereotype: RequestRole
+
+
+
+			tr: WaitForBookCheckerRoleEndingToIsMigrantAgent
+				from: WaitForBookCheckerRoleEnding to: IsMigrantAgent
+
+				trigger's event: endOfBookCheckerRoleEvent					stereotype: EndRole
+						
+					signal: endOfBookCheckerRoleSignal
+				
+				guard: not specified
+
+				effect: 
+					name: migrationActivity
+					action: move
+						stereotype: Migration
+
+
+
+
+
+
+			tr: IsResultsDeliverRoleObtainedToWaitForResultsDeliverRoleEnding
+				from: IsResultsDeliverRoleObtained to: WaitForResultsDeliverRoleEnding
+
+				trigger's event: not specified
+				
+				guard: isRoleObtained
+
+				effect: 
+					name: ResultsDeliverRoleActivatingActivity
+					action: startResultsDeliverRole
+						stereotype: ActivateRole
+
+
+
+			tr: BookCheckerRole-LoopToIsBookCheckerRoleObtained
+				from: BookCheckerRole-Loop to: IsBookCheckerRoleObtained
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: askingForBookCheckerRoleActivity
+					action: askForBookCheckerRole
+						stereotype: RequestRole
+
+
+
+			tr: IsMigrantAgentToLibraryManagementGroup-Loop_2
+				from: IsMigrantAgent to: LibraryManagementGroup-Loop
+
+				trigger's event: not specified
+				
+				guard: isMigrantAgent
+
+				effect: 
+					name: afterMigrationTreatmentActivity
+					action: treatmentAfterMigration
+						stereotype: AfterMigration
+
+
+
+
+
+
+			tr: IsMissionTerminatedToBookCheckerRole-Loop
+				from: IsMissionTeminated to: BookCheckerRole-Loop
+
+				trigger's event: not specified
+				
+				guard: isItineraryNotEmpty
+
+				effect: not specified
+
+			tr: LibraryManagementGroup-LoopToIsLibraryManagementGroupJoined
+				from: LibraryManagementGroup-Loop to: IsLibraryManagementGroupJoined
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: askingForJoiningGroupActivity
+					action: askForJoiningLibraryManagementGroup
+						stereotype: JoinGroup
+
+
+
+			tr: IsResultsDeliverRoleObtainedToResultsDeliverRole-Loop
+				from: IsResultsDeliverRoleObtained to: ResultsDeliverRole-Loop
+
+				trigger's event: not specified
+				
+				guard: isRoleObtained
+
+				effect: not specified
+
+			tr: IsMissionTerminatedToResultsDeliverRole-Loop
+				from: IsMissionTeminated to: ResultsDeliverRole-Loop
+
+				trigger's event: not specified
+				
+				guard: isItineraryEmpty
+
+				effect: not specified
+
+
+
+StateMachine: Librarian_SM
+
+	region: Region0
+
+		states: 
+			IsLibraryManagementGroupJoined, Final, BooksListDeliverRole-Loop, LibraryManagementGroup-Loop, Initial, IsBooksListDeliverRoleObtained, WaitForBooksListDeliverRoleEnding
+
+		transitions: 
+			tr: InitialToLibraryManagementGroup-Loop
+				from: Initial to: LibraryManagementGroup-Loop
+
+
+			tr: WaitForBooksListDeliverRoleEndingToFinal
+				from: WaitForBooksListDeliverRoleEnding to: Final
+
+				trigger's event: endOfBooksListDeliverRoleEvent					stereotype: EndRole
+						
+					signal: endOfBooksListDeliverRoleSignal
+				
+				guard: not specified
+
+				effect: 
+					name: leavingLibraryManagementGroupActivity
+					action: leaveLibraryManagementGroup
+						stereotype: LeaveGroup
+
+
+
+			tr: LibraryManagementGroup-LoopToIsLibraryManagementGroupJoined
+				from: LibraryManagementGroup-Loop to: IsLibraryManagementGroupJoined
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: askingForJoiningGroupActivity
+					action: askForJoiningLibraryManagementGroup
+						stereotype: JoinGroup
+
+
+
+			tr: BooksListDeliverRole-LoopToIsBooksListDeliverRoleObtained
+				from: BooksListDeliverRole-Loop to: IsBooksListDeliverRoleObtained
+
+				trigger's event: not specified
+				
+				guard: not specified
+
+				effect: 
+					name: askingForBooksListDeliverRoleActivity
+					action: askForBooksListDeliverRole
+						stereotype: RequestRole
+
+
+
+			tr: IsLibraryManagementGroupJoinedToBooksListDeliverRole-Loop
+				from: IsLibraryManagementGroupJoined to: BooksListDeliverRole-Loop
+
+				trigger's event: not specified
+				
+				guard: isGroupJoined
+
+				effect: not specified
+
+			tr: IsLibraryManagementGroupJoinedToLibraryManagementGroup-Lopp
+				from: IsLibraryManagementGroupJoined to: LibraryManagementGroup-Loop
+
+				trigger's event: not specified
+				
+				guard: isGroupNotJoined
+
+				effect: not specified
+
+			tr: IsBooksListDeliverRoleObtainedToWaitForBooksListDeliverRoleEnding
+				from: IsBooksListDeliverRoleObtained to: WaitForBooksListDeliverRoleEnding
+
+				trigger's event: not specified
+				
+				guard: isRoleObtained
+
+				effect: 
+					name: BooksListDeliverRoleActivatingActivity
+					action: startBooksListDeliverRole
+						stereotype: ActivateRole
+
+
+
+			tr: IsBooksListDeliverRoleObtainedToBooksListDeliverRole-Loop
+				from: IsBooksListDeliverRoleObtained to: BooksListDeliverRole-Loop
+
+				trigger's event: not specified
+				
+				guard: isRoleNotObtained
+
+				effect: not specified
+

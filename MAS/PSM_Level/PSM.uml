@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PSMM_Profile="http:///schemas/PSMM_Profile/_TAlqoAWNEeOa4elwlfqVTA/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/PSMM_Profile/_TAlqoAWNEeOa4elwlfqVTA/1 psmm.profile.uml#_TAlqoQWNEeOa4elwlfqVTA">
+  <uml:Model xmi:id="_zhnuYEFNEeOcXLweKxUXCQ" name="psm_model">
+    <packagedElement xmi:type="uml:Package" xmi:id="_zhnuYUFNEeOcXLweKxUXCQ" name="DataTypes">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zhnuYkFNEeOcXLweKxUXCQ" name="String"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zhnuY0FNEeOcXLweKxUXCQ" name="Integer"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zhnuZEFNEeOcXLweKxUXCQ" name="Boolean"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zhnuZUFNEeOcXLweKxUXCQ" name="Real"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zhnuZkFNEeOcXLweKxUXCQ" name="OclAny"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnuZ0FNEeOcXLweKxUXCQ" name="RoleEndingBehaviorInterf">
+      <ownedOperation xmi:id="_zhnuaEFNEeOcXLweKxUXCQ" name="confirmEndOfRole" visibility="public">
+        <ownedParameter xmi:id="_zhnuaUFNEeOcXLweKxUXCQ" name="return" type="_zhnuZkFNEeOcXLweKxUXCQ" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuakFNEeOcXLweKxUXCQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnua0FNEeOcXLweKxUXCQ" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zhnubEFNEeOcXLweKxUXCQ" name="RoleEndingBehaviorImpl">
+      <ownedAttribute xmi:id="_zhnubUFNEeOcXLweKxUXCQ" name="valuesToReturn" visibility="private" type="_zhnuZkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnubkFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnub0FNEeOcXLweKxUXCQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_zhnucEFNEeOcXLweKxUXCQ" name="confirmEndOfRole" visibility="public">
+        <ownedParameter xmi:id="_zhnucUFNEeOcXLweKxUXCQ" name="return" type="_zhnuZkFNEeOcXLweKxUXCQ" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuckFNEeOcXLweKxUXCQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuc0FNEeOcXLweKxUXCQ" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnudEFNEeOcXLweKxUXCQ" name="Actor"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnudUFNEeOcXLweKxUXCQ" name="ResultsDeliverRole"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnudkFNEeOcXLweKxUXCQ" name="ResultsDeliverRoleBehaviorInterf">
+      <ownedOperation xmi:id="_zhnud0FNEeOcXLweKxUXCQ" name="stopRole" visibility="public"/>
+      <ownedOperation xmi:id="_zhnueEFNEeOcXLweKxUXCQ" name="become" visibility="package">
+        <ownedParameter xmi:id="_zhnueUFNEeOcXLweKxUXCQ" name="b" type="_zhnuZ0FNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuekFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnue0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnufEFNEeOcXLweKxUXCQ" name="return" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnufUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnufkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zhnuf0FNEeOcXLweKxUXCQ" name="ResultsDeliverRoleBehaviorImpl">
+      <ownedAttribute xmi:id="_zhnugEFNEeOcXLweKxUXCQ" name="itsGroup" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnugUFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnugkFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnug0FNEeOcXLweKxUXCQ" value="LibraryManagement"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnuhEFNEeOcXLweKxUXCQ" name="interactsWith" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuhUFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuhkFNEeOcXLweKxUXCQ" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnuh0FNEeOcXLweKxUXCQ" value="{}"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnuiEFNEeOcXLweKxUXCQ" name="stop" visibility="private" type="_zhnuZEFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuiUFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuikFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnui0FNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnujEFNEeOcXLweKxUXCQ" name="bookRepositories" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_NBGBQP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnujUFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnujkFNEeOcXLweKxUXCQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_zhnuj0FNEeOcXLweKxUXCQ" name="stopRole" visibility="public"/>
+      <ownedOperation xmi:id="_zhnukEFNEeOcXLweKxUXCQ" name="displayBookRepositories" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnukUFNEeOcXLweKxUXCQ" name="BookCheckerRole"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnukkFNEeOcXLweKxUXCQ" name="BookCheckerRoleBehaviorInterf">
+      <ownedOperation xmi:id="_zhnuk0FNEeOcXLweKxUXCQ" name="stopRole" visibility="public"/>
+      <ownedOperation xmi:id="_zhnulEFNEeOcXLweKxUXCQ" name="become" visibility="package">
+        <ownedParameter xmi:id="_zhnulUFNEeOcXLweKxUXCQ" name="b" type="_zhnuZ0FNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnulkFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnul0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnumEFNEeOcXLweKxUXCQ" name="return" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnumUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnumkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zhnum0FNEeOcXLweKxUXCQ" name="BookCheckerRoleBehaviorImpl">
+      <ownedAttribute xmi:id="_zhnunEFNEeOcXLweKxUXCQ" name="itsGroup" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnunUFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnunkFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnun0FNEeOcXLweKxUXCQ" value="LibraryManagement"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnuoEFNEeOcXLweKxUXCQ" name="interactsWith" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuoUFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuokFNEeOcXLweKxUXCQ" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnuo0FNEeOcXLweKxUXCQ" value="{BooksListDeliver}"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnupEFNEeOcXLweKxUXCQ" name="stop" visibility="private" type="_zhnuZEFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnupUFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnupkFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnup0FNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnuqEFNEeOcXLweKxUXCQ" name="booksList" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_NbeQIP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuqUFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuqkFNEeOcXLweKxUXCQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_zhnuq0FNEeOcXLweKxUXCQ" name="stopRole" visibility="public"/>
+      <ownedOperation xmi:id="_zhnurEFNEeOcXLweKxUXCQ" name="booksFilter" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnurUFNEeOcXLweKxUXCQ" name="BooksListDeliverRole"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnurkFNEeOcXLweKxUXCQ" name="BooksListDeliverRoleBehaviorInterf">
+      <ownedOperation xmi:id="_zhnur0FNEeOcXLweKxUXCQ" name="stopRole" visibility="public"/>
+      <ownedOperation xmi:id="_zhnusEFNEeOcXLweKxUXCQ" name="become" visibility="package">
+        <ownedParameter xmi:id="_zhnusUFNEeOcXLweKxUXCQ" name="b" type="_zhnuZ0FNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuskFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnus0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnutEFNEeOcXLweKxUXCQ" name="return" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnutUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnutkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnut0FNEeOcXLweKxUXCQ" name="getBooksList" visibility="public">
+        <ownedParameter xmi:id="_zhnuuEFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_NbeQIP3VEeKnzsDD7fTfsA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuuUFNEeOcXLweKxUXCQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuukFNEeOcXLweKxUXCQ" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zhnuu0FNEeOcXLweKxUXCQ" name="BooksListDeliverRoleBehaviorImpl">
+      <ownedAttribute xmi:id="_zhnuvEFNEeOcXLweKxUXCQ" name="itsGroup" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuvUFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuvkFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnuv0FNEeOcXLweKxUXCQ" value="LibraryManagement"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnuwEFNEeOcXLweKxUXCQ" name="interactsWith" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuwUFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuwkFNEeOcXLweKxUXCQ" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnuw0FNEeOcXLweKxUXCQ" value="{}"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnuxEFNEeOcXLweKxUXCQ" name="stop" visibility="private" type="_zhnuZEFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuxUFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuxkFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnux0FNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnuyEFNEeOcXLweKxUXCQ" name="booksList" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_NbeQIP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuyUFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuykFNEeOcXLweKxUXCQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_zhnuy0FNEeOcXLweKxUXCQ" name="stopRole" visibility="public"/>
+      <ownedOperation xmi:id="_zhnuzEFNEeOcXLweKxUXCQ" name="getBooksList" visibility="public">
+        <ownedParameter xmi:id="_zhnuzUFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_NbeQIP3VEeKnzsDD7fTfsA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnuzkFNEeOcXLweKxUXCQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnuz0FNEeOcXLweKxUXCQ" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnu0EFNEeOcXLweKxUXCQ" name="MobileBookSeekerAgent">
+      <generalization xmi:id="_zhnu0UFNEeOcXLweKxUXCQ" general="_zhnudEFNEeOcXLweKxUXCQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnu0kFNEeOcXLweKxUXCQ" name="MobileBookSeekerAgentBehaviorInterf">
+      <ownedOperation xmi:id="_zhnu00FNEeOcXLweKxUXCQ" name="become" visibility="package">
+        <ownedParameter xmi:id="_zhnu1EFNEeOcXLweKxUXCQ" name="b" type="_zhnu0kFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu1UFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu1kFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnu10FNEeOcXLweKxUXCQ" name="return" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu2EFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu2UFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zhnu2kFNEeOcXLweKxUXCQ" name="MobileBookSeekerAgentBehaviorImpl">
+      <ownedAttribute xmi:id="_zhnu20FNEeOcXLweKxUXCQ" name="groupJoined" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu3EFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu3UFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnu3kFNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu30FNEeOcXLweKxUXCQ" name="roleObtained" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu4EFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu4UFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnu4kFNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu40FNEeOcXLweKxUXCQ" name="migrantAgent" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu5EFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu5UFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnu5kFNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu50FNEeOcXLweKxUXCQ" name="searchedBook" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_NbeQIP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu6EFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu6UFNEeOcXLweKxUXCQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu6kFNEeOcXLweKxUXCQ" name="bookRepositories" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_NBGBQP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu60FNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu7EFNEeOcXLweKxUXCQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu7UFNEeOcXLweKxUXCQ" name="itinerary" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_N1QCEP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu7kFNEeOcXLweKxUXCQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu70FNEeOcXLweKxUXCQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu8EFNEeOcXLweKxUXCQ" name="finalSite" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_N1QCEP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu8UFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu8kFNEeOcXLweKxUXCQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu80FNEeOcXLweKxUXCQ" name="nextSite" visibility="private">
+        <type xmi:type="uml:Class" href="../PIM_Level/PIM.uml#_N1QCEP3VEeKnzsDD7fTfsA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu9EFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu9UFNEeOcXLweKxUXCQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnu9kFNEeOcXLweKxUXCQ" name="mayPlay" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu90FNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnu-EFNEeOcXLweKxUXCQ" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnu-UFNEeOcXLweKxUXCQ" value="{BookChecker,ResultsDeliver}"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnu-kFNEeOcXLweKxUXCQ" name="LibrarianAgent">
+      <generalization xmi:id="_zhnu-0FNEeOcXLweKxUXCQ" general="_zhnudEFNEeOcXLweKxUXCQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnu_EFNEeOcXLweKxUXCQ" name="LibrarianAgentBehaviorInterf"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zhnu_UFNEeOcXLweKxUXCQ" name="LibrarianAgentBehaviorImpl">
+      <ownedAttribute xmi:id="_zhnu_kFNEeOcXLweKxUXCQ" name="groupJoined" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnu_0FNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvAEFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnvAUFNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnvAkFNEeOcXLweKxUXCQ" name="roleObtained" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvA0FNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvBEFNEeOcXLweKxUXCQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnvBUFNEeOcXLweKxUXCQ" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhnvBkFNEeOcXLweKxUXCQ" name="mayPlay" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvB0FNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvCEFNEeOcXLweKxUXCQ" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnvCUFNEeOcXLweKxUXCQ" value="{BooksListDeliver}"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnvCkFNEeOcXLweKxUXCQ" name="LibraryManagementGroup"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zhnvC0FNEeOcXLweKxUXCQ" name="LibraryManagementGroupBehaviorInterf">
+      <ownedOperation xmi:id="_zhnvDEFNEeOcXLweKxUXCQ" name="joinGroup" visibility="public">
+        <ownedParameter xmi:id="_zhnvDUFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvDkFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvD0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvEEFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvEUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvEkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvE0FNEeOcXLweKxUXCQ" name="leaveGroup" visibility="public">
+        <ownedParameter xmi:id="_zhnvFEFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvFUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvFkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvF0FNEeOcXLweKxUXCQ" name="askForBooksListDeliverRole" visibility="public">
+        <ownedParameter xmi:id="_zhnvGEFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvGUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvGkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvG0FNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvHEFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvHUFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvHkFNEeOcXLweKxUXCQ" name="askForBookCheckerRole" visibility="public">
+        <ownedParameter xmi:id="_zhnvH0FNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvIEFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvIUFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvIkFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvI0FNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvJEFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvJUFNEeOcXLweKxUXCQ" name="askForResultsDeliverRole" visibility="public">
+        <ownedParameter xmi:id="_zhnvJkFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvJ0FNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvKEFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvKUFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvKkFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvK0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zhnvLEFNEeOcXLweKxUXCQ" name="LibraryManagementGroupBehaviorImpl">
+      <ownedAttribute xmi:id="_zhnvLUFNEeOcXLweKxUXCQ" name="roles" visibility="public" type="_zhnuYkFNEeOcXLweKxUXCQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvLkFNEeOcXLweKxUXCQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvL0FNEeOcXLweKxUXCQ" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_zhnvMEFNEeOcXLweKxUXCQ" value="{BooksListDeliver,BookChecker,ResultsDeliver}"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_zhnvMUFNEeOcXLweKxUXCQ" name="joinGroup" visibility="public">
+        <ownedParameter xmi:id="_zhnvMkFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvM0FNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvNEFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvNUFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvNkFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvN0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvOEFNEeOcXLweKxUXCQ" name="leaveGroup" visibility="public">
+        <ownedParameter xmi:id="_zhnvOUFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvOkFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvO0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvPEFNEeOcXLweKxUXCQ" name="askForBooksListDeliverRole" visibility="public">
+        <ownedParameter xmi:id="_zhnvPUFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvPkFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvP0FNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvQEFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvQUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvQkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvQ0FNEeOcXLweKxUXCQ" name="askForBookCheckerRole" visibility="public">
+        <ownedParameter xmi:id="_zhnvREFNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvRUFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvRkFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvR0FNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvSEFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvSUFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zhnvSkFNEeOcXLweKxUXCQ" name="askForResultsDeliverRole" visibility="public">
+        <ownedParameter xmi:id="_zhnvS0FNEeOcXLweKxUXCQ" name="a" visibility="private" type="_zhnudEFNEeOcXLweKxUXCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvTEFNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvTUFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_zhnvTkFNEeOcXLweKxUXCQ" name="return" visibility="public" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhnvT0FNEeOcXLweKxUXCQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhnvUEFNEeOcXLweKxUXCQ" value="1"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <profileApplication xmi:id="_zhnvUUFNEeOcXLweKxUXCQ">
+      <eAnnotations xmi:id="_zhnvUkFNEeOcXLweKxUXCQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="psmm.profile.uml#_TAlqoQWNEeOa4elwlfqVTA"/>
+      </eAnnotations>
+      <appliedProfile href="psmm.profile.uml#_GYGNoPZ6EeKZtNt8oy3yQg"/>
+    </profileApplication>
+  </uml:Model>
+  <PSMM_Profile:Actor xmi:id="_zhnvU0FNEeOcXLweKxUXCQ" base_Interface="_zhnudUFNEeOcXLweKxUXCQ" adopts="_zhnvVEFNEeOcXLweKxUXCQ _zhnvZUFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentInterface xmi:id="_zhnvVEFNEeOcXLweKxUXCQ" base_Interface="_zhnudkFNEeOcXLweKxUXCQ" itsImplementation="_zhnvVUFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentImplementation xmi:id="_zhnvVUFNEeOcXLweKxUXCQ" standAlone="true" base_Class="_zhnuf0FNEeOcXLweKxUXCQ">
+    <itsStateMachine href="../PIM_Level/PIM.uml#_poI9QP9hEeKsuqKZA0ha9A"/>
+  </PSMM_Profile:ComportmentImplementation>
+  <PSMM_Profile:Actor xmi:id="_zhnvVkFNEeOcXLweKxUXCQ" base_Interface="_zhnukUFNEeOcXLweKxUXCQ" adopts="_zhnvV0FNEeOcXLweKxUXCQ _zhnvZUFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentInterface xmi:id="_zhnvV0FNEeOcXLweKxUXCQ" base_Interface="_zhnukkFNEeOcXLweKxUXCQ" itsImplementation="_zhnvWEFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentImplementation xmi:id="_zhnvWEFNEeOcXLweKxUXCQ" standAlone="true" base_Class="_zhnum0FNEeOcXLweKxUXCQ">
+    <itsStateMachine href="../PIM_Level/PIM.uml#_0CqbYP9hEeKsuqKZA0ha9A"/>
+  </PSMM_Profile:ComportmentImplementation>
+  <PSMM_Profile:Actor xmi:id="_zhnvWUFNEeOcXLweKxUXCQ" base_Interface="_zhnurUFNEeOcXLweKxUXCQ" adopts="_zhnvWkFNEeOcXLweKxUXCQ _zhnvZUFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentInterface xmi:id="_zhnvWkFNEeOcXLweKxUXCQ" base_Interface="_zhnurkFNEeOcXLweKxUXCQ" itsImplementation="_zhnvW0FNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentImplementation xmi:id="_zhnvW0FNEeOcXLweKxUXCQ" base_Class="_zhnuu0FNEeOcXLweKxUXCQ">
+    <itsStateMachine href="../PIM_Level/PIM.uml#_AyWaEP9iEeKsuqKZA0ha9A"/>
+  </PSMM_Profile:ComportmentImplementation>
+  <PSMM_Profile:Actor xmi:id="_zhnvXEFNEeOcXLweKxUXCQ" base_Interface="_zhnu0EFNEeOcXLweKxUXCQ" adopts="_zhnvXUFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentInterface xmi:id="_zhnvXUFNEeOcXLweKxUXCQ" base_Interface="_zhnu0kFNEeOcXLweKxUXCQ" itsImplementation="_zhnvXkFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentImplementation xmi:id="_zhnvXkFNEeOcXLweKxUXCQ" standAlone="true" base_Class="_zhnu2kFNEeOcXLweKxUXCQ">
+    <itsStateMachine href="../PIM_Level/PIM.uml#_a05V8P9iEeKsuqKZA0ha9A"/>
+  </PSMM_Profile:ComportmentImplementation>
+  <PSMM_Profile:Actor xmi:id="_zhnvX0FNEeOcXLweKxUXCQ" base_Interface="_zhnu-kFNEeOcXLweKxUXCQ" adopts="_zhnvYEFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentInterface xmi:id="_zhnvYEFNEeOcXLweKxUXCQ" base_Interface="_zhnu_EFNEeOcXLweKxUXCQ" itsImplementation="_zhnvYUFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentImplementation xmi:id="_zhnvYUFNEeOcXLweKxUXCQ" standAlone="true" base_Class="_zhnu_UFNEeOcXLweKxUXCQ">
+    <itsStateMachine href="../PIM_Level/PIM.uml#_Md8egP9iEeKsuqKZA0ha9A"/>
+  </PSMM_Profile:ComportmentImplementation>
+  <PSMM_Profile:Actor xmi:id="_zhnvYkFNEeOcXLweKxUXCQ" base_Interface="_zhnvCkFNEeOcXLweKxUXCQ" adopts="_zhnvY0FNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentInterface xmi:id="_zhnvY0FNEeOcXLweKxUXCQ" base_Interface="_zhnvC0FNEeOcXLweKxUXCQ" itsImplementation="_zhnvZEFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentImplementation xmi:id="_zhnvZEFNEeOcXLweKxUXCQ" base_Class="_zhnvLEFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentInterface xmi:id="_zhnvZUFNEeOcXLweKxUXCQ" base_Interface="_zhnuZ0FNEeOcXLweKxUXCQ" itsImplementation="_zhnvZkFNEeOcXLweKxUXCQ"/>
+  <PSMM_Profile:ComportmentImplementation xmi:id="_zhnvZkFNEeOcXLweKxUXCQ" base_Class="_zhnubEFNEeOcXLweKxUXCQ"/>
+</xmi:XMI>

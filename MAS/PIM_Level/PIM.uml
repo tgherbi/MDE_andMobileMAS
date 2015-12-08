@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PIMM_Profile="http:///schemas/PIMM_Profile/_NwpWcP33EeKXpecBAjC3rg/18" xmlns:PIMM_Profile_1="http:///schemas/PIMM_Profile/_a_WI8AN0EeO2-74KUwC_1Q/1" xmlns:PIMM_Profile_2="http:///schemas/PIMM_Profile/_zR6JUP9gEeKsuqKZA0ha9A/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http:///schemas/PIMM_Profile/_NwpWcP33EeKXpecBAjC3rg/18 PIMM.profile.uml#_NwpWcf33EeKXpecBAjC3rg http:///schemas/PIMM_Profile/_a_WI8AN0EeO2-74KUwC_1Q/1 file:/D:/newEclipse/workspace/MAS/PIM_Level/PIMM.profile.uml#_a_f58AN0EeO2-74KUwC_1Q http:///schemas/PIMM_Profile/_zR6JUP9gEeKsuqKZA0ha9A/0 PIMM.profile.uml#_zSf_MP9gEeKsuqKZA0ha9A">
+  <uml:Model xmi:id="_XzSONP3UEeKnzsDD7fTfsA" name="Model">
+    <packageImport xmi:id="_XzSONf3UEeKnzsDD7fTfsA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LMkvoP3VEeKnzsDD7fTfsA" name="LibraryManagement">
+      <ownedOperation xmi:id="_1RXAEP3VEeKnzsDD7fTfsA" name="joinGroup">
+        <ownedParameter xmi:id="_7s7VUP3VEeKnzsDD7fTfsA" name="a" visibility="private" type="_OliPgP3VEeKnzsDD7fTfsA"/>
+        <ownedParameter xmi:id="__iWuwP3VEeKnzsDD7fTfsA" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_AtmZ4P3WEeKnzsDD7fTfsA" name="leaveGroup" visibility="public">
+        <ownedParameter xmi:id="_DZQu4P3WEeKnzsDD7fTfsA" name="a" visibility="private" type="_OliPgP3VEeKnzsDD7fTfsA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_FUDAkP3WEeKnzsDD7fTfsA" name="askForBooksListDeliverRole">
+        <ownedParameter xmi:id="_MJspwP3WEeKnzsDD7fTfsA" name="a" visibility="private" type="_OliPgP3VEeKnzsDD7fTfsA"/>
+        <ownedParameter xmi:id="_TfiO4P3WEeKnzsDD7fTfsA" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_UP9mQP3WEeKnzsDD7fTfsA" name="askForBookCheckerRole">
+        <ownedParameter xmi:id="_X_krkP3WEeKnzsDD7fTfsA" name="a" visibility="private" type="_OliPgP3VEeKnzsDD7fTfsA"/>
+        <ownedParameter xmi:id="_ZsMlcP3WEeKnzsDD7fTfsA" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_aS8cYP3WEeKnzsDD7fTfsA" name="askForResultsDeliverRole">
+        <ownedParameter xmi:id="_dxtpUP3WEeKnzsDD7fTfsA" name="a" visibility="private" type="_OliPgP3VEeKnzsDD7fTfsA"/>
+        <ownedParameter xmi:id="_hly-8P3WEeKnzsDD7fTfsA" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LsKOoP3VEeKnzsDD7fTfsA" name="ResultsDeliver">
+      <ownedAttribute xmi:id="__WKQYP3WEeKnzsDD7fTfsA" name="bookRepositories" visibility="private" type="_NBGBQP3VEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BDFsQP3XEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BDZOQP3XEeKnzsDD7fTfsA" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_BER_EP3XEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_poI9QP9hEeKsuqKZA0ha9A" name="ResultsDeliver_SM">
+        <region xmi:id="_kZXgYP9jEeKsuqKZA0ha9A" name="Region0">
+          <transition xmi:id="_mU6bgP9tEeKsuqKZA0ha9A" name="IntialToDeliverResults" source="_YWZSMP9tEeKsuqKZA0ha9A" target="_dm3GQP9tEeKsuqKZA0ha9A"/>
+          <transition xmi:id="_vdCdoP9tEeKsuqKZA0ha9A" name="DeliverResultsToFinal" source="_dm3GQP9tEeKsuqKZA0ha9A" target="_j20BYP9tEeKsuqKZA0ha9A">
+            <effect xmi:type="uml:Activity" xmi:id="_BitpkP9uEeKsuqKZA0ha9A" name="ResultsDeliveringActivity" node="_TdDvQP9uEeKsuqKZA0ha9A _xRr-IB2VEeOc8pvy6RLTMA">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_TdDvQP9uEeKsuqKZA0ha9A" name="displayBookRepositories"/>
+              <node xmi:type="uml:SendSignalAction" xmi:id="_xRr-IB2VEeOc8pvy6RLTMA" name="sendEndOfResultsDeliverRole" signal="_wVCFkAOfEeOIzpE8gXDnPg">
+                <target xmi:id="_XQ9xwB2WEeOc8pvy6RLTMA" name="target" type="_OOu5EP3VEeKnzsDD7fTfsA">
+                  <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aw_RAB2YEeOc8pvy6RLTMA" value="1"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_T9lDhB2YEeOc8pvy6RLTMA" value="1"/>
+                </target>
+              </node>
+            </effect>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_YWZSMP9tEeKsuqKZA0ha9A" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_dm3GQP9tEeKsuqKZA0ha9A" name="DeliverResults"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_j20BYP9tEeKsuqKZA0ha9A" name="Final"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_MQR9cP3XEeKnzsDD7fTfsA" name="displayBookRepositories" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MK280P3VEeKnzsDD7fTfsA" name="BookChecker">
+      <ownedAttribute xmi:id="_WcNl8P3XEeKnzsDD7fTfsA" name="booksList" visibility="private" type="_NbeQIP3VEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XdCJwP3XEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xde1sP3XEeKnzsDD7fTfsA" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_XeOckP3XEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_0CqbYP9hEeKsuqKZA0ha9A" name="BookChecker_SM">
+        <region xmi:id="_v9ENEP9jEeKsuqKZA0ha9A" name="Region0">
+          <transition xmi:id="_q6ctIP92EeKsuqKZA0ha9A" name="InitialToWaitingForLocalBooksList" source="_YnXXUP92EeKsuqKZA0ha9A" target="_ds9YIP92EeKsuqKZA0ha9A">
+            <effect xmi:type="uml:Activity" xmi:id="_6RVXkP92EeKsuqKZA0ha9A" name="MessageSendingActivity" node="_c9wTUP93EeKsuqKZA0ha9A">
+              <node xmi:type="uml:SendSignalAction" xmi:id="_c9wTUP93EeKsuqKZA0ha9A" name="sendGetBooksList" signal="_NfAQ4P94EeKsuqKZA0ha9A">
+                <argument xmi:id="_5Xj18P-BEeKsuqKZA0ha9A" name="sender" type="_OOu5EP3VEeKnzsDD7fTfsA">
+                  <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wyVd0P-HEeKsuqKZA0ha9A" value="1"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ANLkgAKkEeOU3KrLjtP7iQ" value="1"/>
+                </argument>
+                <target xmi:id="_XpXVo_-EEeKsuqKZA0ha9A" name="target" type="_O-Q4kP3VEeKnzsDD7fTfsA">
+                  <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HruQYP-IEeKsuqKZA0ha9A" value="1"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C8ki8AKkEeOU3KrLjtP7iQ" value="1"/>
+                </target>
+              </node>
+            </effect>
+          </transition>
+          <transition xmi:id="_yoIKgP92EeKsuqKZA0ha9A" name="WaitingForLocalBooksListToFinal" source="_ds9YIP92EeKsuqKZA0ha9A" target="_iqgQMP92EeKsuqKZA0ha9A">
+            <effect xmi:type="uml:Activity" xmi:id="_iZPpMAJ4EeOU3KrLjtP7iQ" name="BooksFilteringActivity" node="_DNaC0AJ5EeOU3KrLjtP7iQ _EPt48B2XEeOc8pvy6RLTMA">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_DNaC0AJ5EeOU3KrLjtP7iQ" name="booksFilter"/>
+              <node xmi:type="uml:SendSignalAction" xmi:id="_EPt48B2XEeOc8pvy6RLTMA" name="sendEndOfBookCheckerRole" signal="_iD47MAOfEeOIzpE8gXDnPg">
+                <target xmi:id="_RVdnMB2XEeOc8pvy6RLTMA" name="target" type="_OOu5EP3VEeKnzsDD7fTfsA">
+                  <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eyVmkB2YEeOc8pvy6RLTMA" value="1"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qb_KQB2YEeOc8pvy6RLTMA" value="1"/>
+                </target>
+              </node>
+            </effect>
+            <trigger xmi:id="_v6j7kP93EeKsuqKZA0ha9A" name="receiveBooksListTrigger" event="_AVigQP94EeKsuqKZA0ha9A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_YnXXUP92EeKsuqKZA0ha9A" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ds9YIP92EeKsuqKZA0ha9A" name="WaitingForLocalBooksList"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_iqgQMP92EeKsuqKZA0ha9A" name="Final"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_dgm1wP3XEeKnzsDD7fTfsA" name="booksFilter" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MiQJIP3VEeKnzsDD7fTfsA" name="BooksListDeliver">
+      <ownedAttribute xmi:id="_pTgcEP3XEeKnzsDD7fTfsA" name="booksList" visibility="private" type="_NbeQIP3VEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qdaqcP3XEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qdtlYP3XEeKnzsDD7fTfsA" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_qedMQP3XEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_AyWaEP9iEeKsuqKZA0ha9A" name="BooksListDeliver_SM">
+        <region xmi:id="_0rHQkP9jEeKsuqKZA0ha9A" name="Region0">
+          <transition xmi:id="_hvGqkAJ5EeOU3KrLjtP7iQ" name="InitialToBooksListDelivering-Loop" source="_Xcw4EAJ5EeOU3KrLjtP7iQ" target="_aQoG0AJ5EeOU3KrLjtP7iQ"/>
+          <transition xmi:id="_pMPKgAJ5EeOU3KrLjtP7iQ" name="BooksListDelivering-LoopToBooksListDelivering-Loop" guard="_hsyEcAJ7EeOU3KrLjtP7iQ" source="_aQoG0AJ5EeOU3KrLjtP7iQ" target="_aQoG0AJ5EeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_hsyEcAJ7EeOU3KrLjtP7iQ" name="continuingRole" constrainedElement="_MiQJIP3VEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_QbrzQAJ_EeOU3KrLjtP7iQ" name="isStopFalse">
+                <language>OCL</language>
+                <body>self.getTaggedValue('PIMM_Profile::Role', 'stop').toString().equalsIgnoreCase('false')</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:Activity" xmi:id="_iyg9cAJ7EeOU3KrLjtP7iQ" name="BooksListSendingActivity" node="_zMAUYAJ7EeOU3KrLjtP7iQ">
+              <node xmi:type="uml:SendSignalAction" xmi:id="_zMAUYAJ7EeOU3KrLjtP7iQ" name="sendBooksList" signal="_D6JaAP95EeKsuqKZA0ha9A">
+                <argument xmi:id="_9FTUwAJ7EeOU3KrLjtP7iQ" name="booksList" type="_NbeQIP3VEeKnzsDD7fTfsA">
+                  <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jZ6NcAKjEeOU3KrLjtP7iQ" value="*"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hz_YgAKjEeOU3KrLjtP7iQ"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ogZmIAKjEeOU3KrLjtP7iQ" value="*"/>
+                </argument>
+                <target xmi:id="_FdmccAJ8EeOU3KrLjtP7iQ" name="target" type="_OOu5EP3VEeKnzsDD7fTfsA">
+                  <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NcIukAKjEeOU3KrLjtP7iQ" value="1"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HPBFAAKjEeOU3KrLjtP7iQ" value="1"/>
+                </target>
+              </node>
+            </effect>
+            <trigger xmi:id="_gKbg4AJ7EeOU3KrLjtP7iQ" name="receiveGetBooksListTrigger" event="_dbYEMAJ8EeOU3KrLjtP7iQ"/>
+          </transition>
+          <transition xmi:id="_rqVkoAJ5EeOU3KrLjtP7iQ" name="BooksListDelivering-LoopToFinal" guard="_OIv5kAJ6EeOU3KrLjtP7iQ" source="_aQoG0AJ5EeOU3KrLjtP7iQ" target="_ep9ekAJ5EeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_OIv5kAJ6EeOU3KrLjtP7iQ" name="stoppingRole" constrainedElement="_MiQJIP3VEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_tAno0AJ-EeOU3KrLjtP7iQ" name="isStopTrue">
+                <language>OCL</language>
+                <body>self.getTaggedValue('PIMM_Profile::Role', 'stop').toString().equalsIgnoreCase('true')</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:Activity" xmi:id="_r7BwkB2XEeOc8pvy6RLTMA" name="Ending" node="_wSkYkB2XEeOc8pvy6RLTMA">
+              <node xmi:type="uml:SendSignalAction" xmi:id="_wSkYkB2XEeOc8pvy6RLTMA" name="sendEndOfBooksListDeliverRole" signal="_T2C1gAMoEeOU3KrLjtP7iQ">
+                <target xmi:id="_8c3LMB2XEeOc8pvy6RLTMA" name="target" type="_O-Q4kP3VEeKnzsDD7fTfsA">
+                  <upperBound xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j2I3oB2YEeOc8pvy6RLTMA" value="1"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uMyiYB2YEeOc8pvy6RLTMA" value="1"/>
+                </target>
+              </node>
+            </effect>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Xcw4EAJ5EeOU3KrLjtP7iQ" name="Intial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_aQoG0AJ5EeOU3KrLjtP7iQ" name="BooksListDelivering-Loop"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_ep9ekAJ5EeOU3KrLjtP7iQ" name="Final"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_wrbE0P3XEeKnzsDD7fTfsA" name="getBooksList">
+        <ownedParameter xmi:id="_3HcGAP3XEeKnzsDD7fTfsA" name="return" type="_NbeQIP3VEeKnzsDD7fTfsA" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QvT29QRNEeOjlppfMwSWqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qvmx8wRNEeOjlppfMwSWqA" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NBGBQP3VEeKnzsDD7fTfsA" name="BookRepository">
+      <ownedAttribute xmi:id="_-aljgP3XEeKnzsDD7fTfsA" name="bookFound" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-5cCsP3XEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-6B4kP3XEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_-7htYP3XEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="__aXlgP3XEeKnzsDD7fTfsA" name="siteVisited" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXKk8P3YEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AXdf4P3YEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_AYW3wP3YEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_9jZ8gP3aEeKnzsDD7fTfsA" name="site" visibility="private" type="_N1QCEP3VEeKnzsDD7fTfsA" aggregation="composite" association="_9js3cP3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9jZ8gf3aEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9jZ8gv3aEeKnzsDD7fTfsA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NbeQIP3VEeKnzsDD7fTfsA" name="Book">
+      <ownedAttribute xmi:id="_QmhIcP3YEeKnzsDD7fTfsA" name="isbn" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Rh-rIP3YEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RibXEP3YEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Rjd44P3YEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RwSM4P3YEeKnzsDD7fTfsA" name="title" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SnQ4MP3YEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SnkaMP3YEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_SoUBEP3YEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Sz7bMP3YEeKnzsDD7fTfsA" name="authors" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_To1C4P3YEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TpRu0P3YEeKnzsDD7fTfsA" value="*"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_TqBVsP3YEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_N1QCEP3VEeKnzsDD7fTfsA" name="SiteIdentifier">
+      <ownedAttribute xmi:id="_ia5wEP3YEeKnzsDD7fTfsA" name="siteID" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ja-tAP3YEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jbRn8P3YEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_jcB14P3YEeKnzsDD7fTfsA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OOu5EP3VEeKnzsDD7fTfsA" name="MobileBookSeeker">
+      <generalization xmi:id="_7DP3cP3bEeKnzsDD7fTfsA" general="_OliPgP3VEeKnzsDD7fTfsA"/>
+      <ownedAttribute xmi:id="_A85SwP3ZEeKnzsDD7fTfsA" name="groupJoined" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CCMG4P3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CCx8wP3ZEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_CDhjoP3ZEeKnzsDD7fTfsA" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_COs44P3ZEeKnzsDD7fTfsA" name="roleObtained" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DkiDYP3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dk-vUP3ZEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_DluWMP3ZEeKnzsDD7fTfsA" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_D480MP3ZEeKnzsDD7fTfsA" name="migrantAgent" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FU4msP3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FVMIsP3ZEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_FV7vkP3ZEeKnzsDD7fTfsA" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_qrLuwP3ZEeKnzsDD7fTfsA" name="searchedBook" visibility="private" type="_NbeQIP3VEeKnzsDD7fTfsA" aggregation="composite" association="_qrepsP3ZEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qrLuwf3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qrLuwv3ZEeKnzsDD7fTfsA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_2yyZwP3ZEeKnzsDD7fTfsA" name="bookRepositories" visibility="private" type="_NBGBQP3VEeKnzsDD7fTfsA" aggregation="composite" association="_2zFUsP3ZEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2yyZwf3ZEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2yyZwv3ZEeKnzsDD7fTfsA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Pn__0P3aEeKnzsDD7fTfsA" name="itinerary" visibility="private" type="_N1QCEP3VEeKnzsDD7fTfsA" aggregation="composite" association="_PocrwP3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pn__0f3aEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pn__0v3aEeKnzsDD7fTfsA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_acT28P3aEeKnzsDD7fTfsA" name="finalSite" visibility="private" type="_N1QCEP3VEeKnzsDD7fTfsA" aggregation="composite" association="_acv70P3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_acT28f3aEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_acT28v3aEeKnzsDD7fTfsA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_itvhoP3aEeKnzsDD7fTfsA" name="nextSite" visibility="private" type="_N1QCEP3VEeKnzsDD7fTfsA" aggregation="composite" association="_it5SoP3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_itvhof3aEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_itvhov3aEeKnzsDD7fTfsA" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_a05V8P9iEeKsuqKZA0ha9A" name="MobileBookSeeker_SM">
+        <region xmi:id="_5oDrsP9jEeKsuqKZA0ha9A" name="Region0">
+          <transition xmi:id="_rx8jEAMqEeOU3KrLjtP7iQ" name="InitialToIsMigrantAgent" source="_PR5C8AMqEeOU3KrLjtP7iQ" target="_SdcY8AMqEeOU3KrLjtP7iQ"/>
+          <transition xmi:id="_t9kGEAMqEeOU3KrLjtP7iQ" name="IsMigrantAgentToLibraryManagementGroup-Loop_1" guard="_BiM7oAMxEeOU3KrLjtP7iQ" source="_SdcY8AMqEeOU3KrLjtP7iQ" target="_UEQlwAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_BiM7oAMxEeOU3KrLjtP7iQ" name="notMigrantAgent" constrainedElement="_D480MP3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_EqUjIAMxEeOU3KrLjtP7iQ" name="isNotMigrantAgent">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=false</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_vXkl8AMqEeOU3KrLjtP7iQ" name="IsMigrantAgentToLibraryManagementGroup-Loop_2" guard="_Vh6LUAMxEeOU3KrLjtP7iQ" source="_SdcY8AMqEeOU3KrLjtP7iQ" target="_UEQlwAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_Vh6LUAMxEeOU3KrLjtP7iQ" name="migrantAgent" constrainedElement="_D480MP3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_gABI8AMxEeOU3KrLjtP7iQ" name="isMigrantAgent">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=true</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:Activity" xmi:id="_sSMsQAMxEeOU3KrLjtP7iQ" name="afterMigrationTreatmentActivity" node="_ocoNcAN0EeO2-74KUwC_1Q">
+              <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_yHzv8AONEeOIzpE8gXDnPg" name="AfterMigration_SM">
+                <region xmi:id="_Ec0_cAOOEeOIzpE8gXDnPg" name="Region0"/>
+              </ownedBehavior>
+              <node xmi:type="uml:OpaqueAction" xmi:id="_ocoNcAN0EeO2-74KUwC_1Q" name="treatmentAfterMigration"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_wy6ikAMqEeOU3KrLjtP7iQ" name="LibraryManagementGroup-LoopToIsLibraryManagementGroupJoined" source="_UEQlwAMqEeOU3KrLjtP7iQ" target="_VuprAAMqEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_gIO14AOWEeOIzpE8gXDnPg" name="askingForJoiningGroupActivity" node="_zwP-UAOWEeOIzpE8gXDnPg">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_zwP-UAOWEeOIzpE8gXDnPg" name="askForJoiningLibraryManagementGroup"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_yJpE8AMqEeOU3KrLjtP7iQ" name="IsLibraryManagementGroupJoinedToLibraryManagementGroup-Loop" guard="_Gv44IAOXEeOIzpE8gXDnPg" source="_VuprAAMqEeOU3KrLjtP7iQ" target="_UEQlwAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_Gv44IAOXEeOIzpE8gXDnPg" name="groupNotJoind" constrainedElement="_A85SwP3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_XU_pMAOXEeOIzpE8gXDnPg" name="isGroupNotJoined">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>groupJoined=false</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_zriVgAMqEeOU3KrLjtP7iQ" name="IsLibraryManagementGroupJoinedToIsMissionTerminated" guard="_wPbGcAOXEeOIzpE8gXDnPg" source="_VuprAAMqEeOU3KrLjtP7iQ" target="_XJ2dsAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_wPbGcAOXEeOIzpE8gXDnPg" name="groupJoined" constrainedElement="_A85SwP3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_3ztXQAOXEeOIzpE8gXDnPg" name="isGroupJoined">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=true</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_09fsoAMqEeOU3KrLjtP7iQ" name="IsMissionTerminatedToBookCheckerRole-Loop" guard="_MIuvoAOYEeOIzpE8gXDnPg" source="_XJ2dsAMqEeOU3KrLjtP7iQ" target="_Yl8BMAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_MIuvoAOYEeOIzpE8gXDnPg" name="itineraryNotEmpty" constrainedElement="_Pn__0P3aEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_lNvFMAOYEeOIzpE8gXDnPg" name="isItineraryNotEmpty">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>!self.empty()</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_2QWboAMqEeOU3KrLjtP7iQ" name="BookCheckerRole-LoopToIsBookCheckerRoleObtained" source="_Yl8BMAMqEeOU3KrLjtP7iQ" target="_Z8EGoAMqEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_b2604AOaEeOIzpE8gXDnPg" name="askingForBookCheckerRoleActivity" node="_oS8QsAOaEeOIzpE8gXDnPg">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_oS8QsAOaEeOIzpE8gXDnPg" name="askForBookCheckerRole"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_3k_TUAMqEeOU3KrLjtP7iQ" name="IsBookCheckerRoleObtainedToBookCheckerRole-Loop" guard="_W3eC4AObEeOIzpE8gXDnPg" source="_Z8EGoAMqEeOU3KrLjtP7iQ" target="_Yl8BMAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_W3eC4AObEeOIzpE8gXDnPg" name="roleNotObtained" constrainedElement="_COs44P3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_huTpkAObEeOIzpE8gXDnPg" name="isRoleNotObtained">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=false</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_46qs0AMqEeOU3KrLjtP7iQ" name="IsBookCheckerRoleObtainedToWaitForBookCheckerRoleEnding" guard="_EnZvYAOcEeOIzpE8gXDnPg" source="_Z8EGoAMqEeOU3KrLjtP7iQ" target="_bZzP8AMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_EnZvYAOcEeOIzpE8gXDnPg" name="roleObtained" constrainedElement="_COs44P3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_O9wfMAOcEeOIzpE8gXDnPg" name="isRoleObtained">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=true</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:Activity" xmi:id="_WFbsgAOcEeOIzpE8gXDnPg" name="BookCheckerRoleActivatingActivity" node="_kfqhcAOcEeOIzpE8gXDnPg">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_kfqhcAOcEeOIzpE8gXDnPg" name="startBookCheckerRole"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_6Te54AMqEeOU3KrLjtP7iQ" name="WaitForBookCheckerRoleEndingToIsMigrantAgent" source="_bZzP8AMqEeOU3KrLjtP7iQ" target="_SdcY8AMqEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_3B-woAOdEeOIzpE8gXDnPg" name="migrationActivity" node="_9JIVEAOdEeOIzpE8gXDnPg">
+              <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_yb3EoAOeEeOIzpE8gXDnPg" name="Migration_SM">
+                <ownedAttribute xmi:id="_3sVVwAQMEeOjlppfMwSWqA" name="moved">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                </ownedAttribute>
+                <region xmi:id="_Xs-VQAOgEeOIzpE8gXDnPg" name="Region0">
+                  <transition xmi:id="_u8NFQAP-EeOjlppfMwSWqA" name="InitialToSetNextSite-Loop" source="_kiuI8AP-EeOjlppfMwSWqA" target="_mP8fwAP-EeOjlppfMwSWqA">
+                    <effect xmi:type="uml:Activity" xmi:id="_cWjt4AQAEeOjlppfMwSWqA" name="cleaningBeforMovingActivity" node="_kRDfQAQAEeOjlppfMwSWqA _tuV5EAQAEeOjlppfMwSWqA">
+                      <node xmi:type="uml:OpaqueAction" xmi:id="_kRDfQAQAEeOjlppfMwSWqA" name="deleteLocalSiteFromItinerary"/>
+                      <node xmi:type="uml:OpaqueAction" xmi:id="_tuV5EAQAEeOjlppfMwSWqA" name="leaveLibraryManagementGroup"/>
+                    </effect>
+                  </transition>
+                  <transition xmi:id="_v2UkIAP-EeOjlppfMwSWqA" name="SetNextSite-LoopToReadyToMove_1" guard="_8vm40AQAEeOjlppfMwSWqA" source="_mP8fwAP-EeOjlppfMwSWqA" target="_nQn5oAP-EeOjlppfMwSWqA">
+                    <ownedRule xmi:id="_8vm40AQAEeOjlppfMwSWqA" name="itineraryNotEmpty" constrainedElement="_Pn__0P3aEeKnzsDD7fTfsA">
+                      <specification xmi:type="uml:OpaqueExpression" xmi:id="_ENC6wAQBEeOjlppfMwSWqA" name="isItineraryNotEmpty">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                        <language>OCL</language>
+                        <body>!self.Empty()</body>
+                      </specification>
+                    </ownedRule>
+                    <effect xmi:type="uml:Activity" xmi:id="_Syv_4AQBEeOjlppfMwSWqA" name="settingFirstSiteAsNextSiteActivity" node="_bmd4QAQBEeOjlppfMwSWqA">
+                      <node xmi:type="uml:OpaqueAction" xmi:id="_bmd4QAQBEeOjlppfMwSWqA" name="firstSiteInItinerayBecomeNextSite"/>
+                    </effect>
+                  </transition>
+                  <transition xmi:id="_wu81QAP-EeOjlppfMwSWqA" name="SetNextSite-LoopToReadyToMove_2" guard="_CVOHYAQKEeOjlppfMwSWqA" source="_mP8fwAP-EeOjlppfMwSWqA" target="_nQn5oAP-EeOjlppfMwSWqA">
+                    <ownedRule xmi:id="_CVOHYAQKEeOjlppfMwSWqA" name="itineraryEmpty" constrainedElement="_Pn__0P3aEeKnzsDD7fTfsA">
+                      <specification xmi:type="uml:OpaqueExpression" xmi:id="_UNVYcAQKEeOjlppfMwSWqA" name="isItineraryEmpty">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                        <language>OCL</language>
+                        <body>self.Empty()</body>
+                      </specification>
+                    </ownedRule>
+                    <effect xmi:type="uml:Activity" xmi:id="_fM0k0AQKEeOjlppfMwSWqA" name="settingFinalSiteAsNextSiteActivity" node="_swEHYAQKEeOjlppfMwSWqA">
+                      <node xmi:type="uml:OpaqueAction" xmi:id="_swEHYAQKEeOjlppfMwSWqA" name="finalSiteInItineraryBecomeNextSite"/>
+                    </effect>
+                  </transition>
+                  <transition xmi:id="_xlVqsAP-EeOjlppfMwSWqA" name="ReadyToMoveToHasMoved" source="_nQn5oAP-EeOjlppfMwSWqA" target="_ocUQsAP-EeOjlppfMwSWqA">
+                    <effect xmi:type="uml:Activity" xmi:id="__2_8AAQKEeOjlppfMwSWqA" name="movingActivity" node="_EMA0cAQLEeOjlppfMwSWqA">
+                      <node xmi:type="uml:OpaqueAction" xmi:id="_EMA0cAQLEeOjlppfMwSWqA" name="jumpToNextSite"/>
+                    </effect>
+                  </transition>
+                  <transition xmi:id="_ybkvIAP-EeOjlppfMwSWqA" name="HasMovedToSetNextSite-Loop" guard="_Pg9TcAQLEeOjlppfMwSWqA" source="_ocUQsAP-EeOjlppfMwSWqA" target="_mP8fwAP-EeOjlppfMwSWqA">
+                    <ownedRule xmi:id="_Pg9TcAQLEeOjlppfMwSWqA" name="agentHasNotMoved" constrainedElement="_3sVVwAQMEeOjlppfMwSWqA">
+                      <specification xmi:type="uml:OpaqueExpression" xmi:id="_srU74AQLEeOjlppfMwSWqA" name="hasNotMoved">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                        <language>OCL</language>
+                        <body>self=false</body>
+                      </specification>
+                    </ownedRule>
+                    <effect xmi:type="uml:Activity" xmi:id="_yogE8AQLEeOjlppfMwSWqA" name="tryingToMoveToAnotherSiteActivity" node="_8cu_IAQLEeOjlppfMwSWqA _DNBAIAQMEeOjlppfMwSWqA">
+                      <node xmi:type="uml:OpaqueAction" xmi:id="_8cu_IAQLEeOjlppfMwSWqA" name="logTheReason"/>
+                      <node xmi:type="uml:OpaqueAction" xmi:id="_DNBAIAQMEeOjlppfMwSWqA" name="deleteNextSiteFromItinerary"/>
+                    </effect>
+                  </transition>
+                  <transition xmi:id="_zRN9sAP-EeOjlppfMwSWqA" name="HasMovedToFinal" guard="_OFWboAQMEeOjlppfMwSWqA" source="_ocUQsAP-EeOjlppfMwSWqA" target="_pW4bgAP-EeOjlppfMwSWqA">
+                    <ownedRule xmi:id="_OFWboAQMEeOjlppfMwSWqA" name="agentHasMoved" constrainedElement="_3sVVwAQMEeOjlppfMwSWqA">
+                      <specification xmi:type="uml:OpaqueExpression" xmi:id="_TL--QAQMEeOjlppfMwSWqA" name="hasMoved">
+                        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                        <language>OCL</language>
+                        <body>self=true</body>
+                      </specification>
+                    </ownedRule>
+                  </transition>
+                  <subvertex xmi:type="uml:Pseudostate" xmi:id="_kiuI8AP-EeOjlppfMwSWqA" name="Initial"/>
+                  <subvertex xmi:type="uml:State" xmi:id="_mP8fwAP-EeOjlppfMwSWqA" name="SetNextSite-Loop"/>
+                  <subvertex xmi:type="uml:State" xmi:id="_nQn5oAP-EeOjlppfMwSWqA" name="ReadyToMove"/>
+                  <subvertex xmi:type="uml:State" xmi:id="_ocUQsAP-EeOjlppfMwSWqA" name="HasMoved"/>
+                  <subvertex xmi:type="uml:FinalState" xmi:id="_pW4bgAP-EeOjlppfMwSWqA" name="Final"/>
+                </region>
+              </ownedBehavior>
+              <node xmi:type="uml:OpaqueAction" xmi:id="_9JIVEAOdEeOIzpE8gXDnPg" name="move"/>
+            </effect>
+            <trigger xmi:id="_v8_D4AOdEeOIzpE8gXDnPg" name="endOfBookCheckerRoleTrigger" event="_bmYsRAOfEeOIzpE8gXDnPg"/>
+          </transition>
+          <transition xmi:id="_7uFPoAMqEeOU3KrLjtP7iQ" name="IsMissionTerminatedToResultsDeliverRole-Loop" guard="_Xcg7kAOZEeOIzpE8gXDnPg" source="_XJ2dsAMqEeOU3KrLjtP7iQ" target="_dmw2wAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_Xcg7kAOZEeOIzpE8gXDnPg" name="itineraryEmpty" constrainedElement="_Pn__0P3aEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_9ySjoAOZEeOIzpE8gXDnPg" name="isItineraryEmpty">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self.Empty()</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_9MjYwAMqEeOU3KrLjtP7iQ" name="ResultsDeliverRole-LoopToIsResultsDeliverRoleObtained" source="_dmw2wAMqEeOU3KrLjtP7iQ" target="_e8TGUAMqEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_6hQbQAOaEeOIzpE8gXDnPg" name="askingForResultsDeliverRoleActivity" node="_E6lmkAObEeOIzpE8gXDnPg">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_E6lmkAObEeOIzpE8gXDnPg" name="askForResultsDeliverRole"/>
+            </effect>
+          </transition>
+          <transition xmi:id="__cDWMAMqEeOU3KrLjtP7iQ" name="IsResultsDeliverRoleObtainedToResultsDeliverRole-Loop" guard="_p5VxUAObEeOIzpE8gXDnPg" source="_e8TGUAMqEeOU3KrLjtP7iQ" target="_dmw2wAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_p5VxUAObEeOIzpE8gXDnPg" name="roleNotObtained" constrainedElement="_COs44P3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_0uPeUAObEeOIzpE8gXDnPg" name="isRoleObtained">
+                <language>OCL</language>
+                <body>self=false</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_BAMCcAMrEeOU3KrLjtP7iQ" name="IsResultsDeliverRoleObtainedToWaitForResultsDeliverRoleEnding" guard="_vuDFcAOcEeOIzpE8gXDnPg" source="_e8TGUAMqEeOU3KrLjtP7iQ" target="_gaBokAMqEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_vuDFcAOcEeOIzpE8gXDnPg" name="roleObtained" constrainedElement="_COs44P3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_3_McQAOcEeOIzpE8gXDnPg" name="isRoleObtained">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=true</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:Activity" xmi:id="__tT-gAOcEeOIzpE8gXDnPg" name="ResultsDeliverRoleActivatingActivity" node="_FUbYAAOdEeOIzpE8gXDnPg">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_FUbYAAOdEeOIzpE8gXDnPg" name="startResultsDeliverRole"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_CfQBcAMrEeOU3KrLjtP7iQ" name="WaitForResultsDeliverRoleEndingToFinal" source="_gaBokAMqEeOU3KrLjtP7iQ" target="_iN9EUwMqEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_U166gAOeEeOIzpE8gXDnPg" name="leavingGroupActivity" node="_aCqsMAOeEeOIzpE8gXDnPg">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_aCqsMAOeEeOIzpE8gXDnPg" name="leaveLibraryManagementGroup"/>
+            </effect>
+            <trigger xmi:id="_Q3tYgAOeEeOIzpE8gXDnPg" name="endOfResultsDeliverRoleTrigger" event="_qQRGwAOfEeOIzpE8gXDnPg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_PR5C8AMqEeOU3KrLjtP7iQ" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_SdcY8AMqEeOU3KrLjtP7iQ" name="IsMigrantAgent"/>
+          <subvertex xmi:type="uml:State" xmi:id="_UEQlwAMqEeOU3KrLjtP7iQ" name="LibraryManagementGroup-Loop"/>
+          <subvertex xmi:type="uml:State" xmi:id="_VuprAAMqEeOU3KrLjtP7iQ" name="IsLibraryManagementGroupJoined"/>
+          <subvertex xmi:type="uml:State" xmi:id="_XJ2dsAMqEeOU3KrLjtP7iQ" name="IsMissionTeminated"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Yl8BMAMqEeOU3KrLjtP7iQ" name="BookCheckerRole-Loop"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Z8EGoAMqEeOU3KrLjtP7iQ" name="IsBookCheckerRoleObtained"/>
+          <subvertex xmi:type="uml:State" xmi:id="_bZzP8AMqEeOU3KrLjtP7iQ" name="WaitForBookCheckerRoleEnding"/>
+          <subvertex xmi:type="uml:State" xmi:id="_dmw2wAMqEeOU3KrLjtP7iQ" name="ResultsDeliverRole-Loop"/>
+          <subvertex xmi:type="uml:State" xmi:id="_e8TGUAMqEeOU3KrLjtP7iQ" name="IsResultsDeliverRoleObtained"/>
+          <subvertex xmi:type="uml:State" xmi:id="_gaBokAMqEeOU3KrLjtP7iQ" name="WaitForResultsDeliverRoleEnding"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_iN9EUwMqEeOU3KrLjtP7iQ" name="Final"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OliPgP3VEeKnzsDD7fTfsA" name="Agent"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_O-Q4kP3VEeKnzsDD7fTfsA" name="Librarian">
+      <generalization xmi:id="_6YBwMP3bEeKnzsDD7fTfsA" general="_OliPgP3VEeKnzsDD7fTfsA"/>
+      <ownedAttribute xmi:id="_gMVKQP3ZEeKnzsDD7fTfsA" name="groupJoined" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hcM2sP3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hczToP3ZEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_hdsrgP3ZEeKnzsDD7fTfsA" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_hlcSQP3ZEeKnzsDD7fTfsA" name="roleObtained" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ivgRoP3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ivzMkP3ZEeKnzsDD7fTfsA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_iwizcP3ZEeKnzsDD7fTfsA" value="false"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Md8egP9iEeKsuqKZA0ha9A" name="Librarian_SM">
+        <region xmi:id="_9gTvoP9jEeKsuqKZA0ha9A" name="Region0">
+          <transition xmi:id="_Omf2oAKoEeOU3KrLjtP7iQ" name="InitialToLibraryManagementGroup-Loop" source="_YmejQAKnEeOU3KrLjtP7iQ" target="_b8dAkAKnEeOU3KrLjtP7iQ"/>
+          <transition xmi:id="_daqOgAKoEeOU3KrLjtP7iQ" name="LibraryManagementGroup-LoopToIsLibraryManagementGroupJoined" source="_b8dAkAKnEeOU3KrLjtP7iQ" target="_mOyMAAKnEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_5qoR8AKtEeOU3KrLjtP7iQ" name="askingForJoiningGroupActivity" node="_DgpU0AKuEeOU3KrLjtP7iQ">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_DgpU0AKuEeOU3KrLjtP7iQ" name="askForJoiningLibraryManagementGroup"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_5JY_ZQKoEeOU3KrLjtP7iQ" name="IsLibraryManagementGroupJoinedToLibraryManagementGroup-Lopp" guard="_RZWxEAKuEeOU3KrLjtP7iQ" source="_mOyMAAKnEeOU3KrLjtP7iQ" target="_b8dAkAKnEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_RZWxEAKuEeOU3KrLjtP7iQ" name="groupNotJoined" constrainedElement="_gMVKQP3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_D_q9sAKvEeOU3KrLjtP7iQ" name="isGroupNotJoined">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=false</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_H886UAKpEeOU3KrLjtP7iQ" name="IsLibraryManagementGroupJoinedToBooksListDeliverRole-Loop" guard="_RKojIAKvEeOU3KrLjtP7iQ" source="_mOyMAAKnEeOU3KrLjtP7iQ" target="_ra7gwAKnEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_RKojIAKvEeOU3KrLjtP7iQ" name="groupJoined" constrainedElement="_gMVKQP3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_YNsWMAKvEeOU3KrLjtP7iQ" name="isGroupJoined">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=true</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_xyvhgAMiEeOU3KrLjtP7iQ" name="BooksListDeliverRole-LoopToIsBooksListDeliverRoleObtained" source="_ra7gwAKnEeOU3KrLjtP7iQ" target="_z16JAAKnEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_otU_sAMjEeOU3KrLjtP7iQ" name="askingForBooksListDeliverRoleActivity" node="_zFxaMAMjEeOU3KrLjtP7iQ">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_zFxaMAMjEeOU3KrLjtP7iQ" name="askForBooksListDeliverRole"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_8EVGEAMiEeOU3KrLjtP7iQ" name="IsBooksListDeliverRoleObtainedToBooksListDeliverRole-Loop" guard="_9TyGUAMjEeOU3KrLjtP7iQ" source="_z16JAAKnEeOU3KrLjtP7iQ" target="_ra7gwAKnEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_9TyGUAMjEeOU3KrLjtP7iQ" name="roleNotObtained" constrainedElement="_hlcSQP3ZEeKnzsDD7fTfsA">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_LESo0AMkEeOU3KrLjtP7iQ" name="isRoleNotObtained">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=false</body>
+              </specification>
+            </ownedRule>
+          </transition>
+          <transition xmi:id="_A6bSUAMjEeOU3KrLjtP7iQ" name="IsBooksListDeliverRoleObtainedToWaitForBooksListDeliverRoleEnding" guard="_ZbjCQAMkEeOU3KrLjtP7iQ" source="_z16JAAKnEeOU3KrLjtP7iQ" target="_4iw5sAKnEeOU3KrLjtP7iQ">
+            <ownedRule xmi:id="_ZbjCQAMkEeOU3KrLjtP7iQ" name="roleObtained">
+              <specification xmi:type="uml:OpaqueExpression" xmi:id="_cjN90AMkEeOU3KrLjtP7iQ" name="isRoleObtained">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+                <language>OCL</language>
+                <body>self=true</body>
+              </specification>
+            </ownedRule>
+            <effect xmi:type="uml:Activity" xmi:id="_jrV3EAMkEeOU3KrLjtP7iQ" name="BooksListDeliverRoleActivatingActivity" node="_r_KucAMkEeOU3KrLjtP7iQ">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_r_KucAMkEeOU3KrLjtP7iQ" name="startBooksListDeliverRole"/>
+            </effect>
+          </transition>
+          <transition xmi:id="_HtPC4AMjEeOU3KrLjtP7iQ" name="WaitForBooksListDeliverRoleEndingToFinal" source="_4iw5sAKnEeOU3KrLjtP7iQ" target="_-N53kAKnEeOU3KrLjtP7iQ">
+            <effect xmi:type="uml:Activity" xmi:id="_EjsNIAMlEeOU3KrLjtP7iQ" name="leavingLibraryManagementGroupActivity" node="_KgtlMAMlEeOU3KrLjtP7iQ">
+              <node xmi:type="uml:OpaqueAction" xmi:id="_KgtlMAMlEeOU3KrLjtP7iQ" name="leaveLibraryManagementGroup"/>
+            </effect>
+            <trigger xmi:id="_Dc6LQAMlEeOU3KrLjtP7iQ" name="endOfBooksListDeliverRoleTrigger" event="_JSuAsAMoEeOU3KrLjtP7iQ"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_YmejQAKnEeOU3KrLjtP7iQ" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_b8dAkAKnEeOU3KrLjtP7iQ" name="LibraryManagementGroup-Loop"/>
+          <subvertex xmi:type="uml:State" xmi:id="_mOyMAAKnEeOU3KrLjtP7iQ" name="IsLibraryManagementGroupJoined"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ra7gwAKnEeOU3KrLjtP7iQ" name="BooksListDeliverRole-Loop"/>
+          <subvertex xmi:type="uml:State" xmi:id="_z16JAAKnEeOU3KrLjtP7iQ" name="IsBooksListDeliverRoleObtained"/>
+          <subvertex xmi:type="uml:State" xmi:id="_4iw5sAKnEeOU3KrLjtP7iQ" name="WaitForBooksListDeliverRoleEnding"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_-N53kAKnEeOU3KrLjtP7iQ" name="Final"/>
+        </region>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qrepsP3ZEeKnzsDD7fTfsA" name="mobileBookSeeker_book_1" memberEnd="_qrepsf3ZEeKnzsDD7fTfsA _qrLuwP3ZEeKnzsDD7fTfsA">
+      <ownedEnd xmi:id="_qrepsf3ZEeKnzsDD7fTfsA" name="mobileBookSeeker" type="_OOu5EP3VEeKnzsDD7fTfsA" association="_qrepsP3ZEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qrepsv3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qreps_3ZEeKnzsDD7fTfsA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_2zFUsP3ZEeKnzsDD7fTfsA" name="mobileBookSeeker_bookRepository_1" memberEnd="_2zFUsf3ZEeKnzsDD7fTfsA _2yyZwP3ZEeKnzsDD7fTfsA">
+      <ownedEnd xmi:id="_2zFUsf3ZEeKnzsDD7fTfsA" name="mobileBookSeeker" type="_OOu5EP3VEeKnzsDD7fTfsA" association="_2zFUsP3ZEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2zFUsv3ZEeKnzsDD7fTfsA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2zFUs_3ZEeKnzsDD7fTfsA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PocrwP3aEeKnzsDD7fTfsA" name="mobileBookSeeker_siteIdentifier_1" memberEnd="_Pocrwf3aEeKnzsDD7fTfsA _Pn__0P3aEeKnzsDD7fTfsA">
+      <ownedEnd xmi:id="_Pocrwf3aEeKnzsDD7fTfsA" name="mobileBookSeeker" type="_OOu5EP3VEeKnzsDD7fTfsA" association="_PocrwP3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pocrwv3aEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pocrw_3aEeKnzsDD7fTfsA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_acv70P3aEeKnzsDD7fTfsA" name="mobileBookSeeker_siteIdentifier_2" memberEnd="_acv70f3aEeKnzsDD7fTfsA _acT28P3aEeKnzsDD7fTfsA">
+      <ownedEnd xmi:id="_acv70f3aEeKnzsDD7fTfsA" name="mobileBookSeeker" type="_OOu5EP3VEeKnzsDD7fTfsA" association="_acv70P3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_acv70v3aEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_acv70_3aEeKnzsDD7fTfsA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_it5SoP3aEeKnzsDD7fTfsA" name="mobileBookSeeker_siteIdentifier_3" memberEnd="_it5Sof3aEeKnzsDD7fTfsA _itvhoP3aEeKnzsDD7fTfsA">
+      <ownedEnd xmi:id="_it5Sof3aEeKnzsDD7fTfsA" name="mobileBookSeeker" type="_OOu5EP3VEeKnzsDD7fTfsA" association="_it5SoP3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_it5Sov3aEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_it5So_3aEeKnzsDD7fTfsA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9js3cP3aEeKnzsDD7fTfsA" name="bookRepository_siteIdentifier_1" memberEnd="_9js3cf3aEeKnzsDD7fTfsA _9jZ8gP3aEeKnzsDD7fTfsA">
+      <ownedEnd xmi:id="_9js3cf3aEeKnzsDD7fTfsA" name="bookRepository" type="_NBGBQP3VEeKnzsDD7fTfsA" association="_9js3cP3aEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9js3cv3aEeKnzsDD7fTfsA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9js3c_3aEeKnzsDD7fTfsA" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_AVigQP94EeKsuqKZA0ha9A" name="BooksListEvent" signal="_D6JaAP95EeKsuqKZA0ha9A"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_NfAQ4P94EeKsuqKZA0ha9A" name="GetBooksListSignal">
+      <ownedAttribute xmi:id="_ih_yAAJ3EeOU3KrLjtP7iQ" name="sender" type="_OOu5EP3VEeKnzsDD7fTfsA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_D6JaAP95EeKsuqKZA0ha9A" name="BooksListSignal">
+      <ownedAttribute xmi:id="_LUFrgAJ4EeOU3KrLjtP7iQ" name="booksList" type="_NbeQIP3VEeKnzsDD7fTfsA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RPLJ4AJ4EeOU3KrLjtP7iQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SQ5FkAJ4EeOU3KrLjtP7iQ" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_dbYEMAJ8EeOU3KrLjtP7iQ" name="GetBooksListEvent" signal="_NfAQ4P94EeKsuqKZA0ha9A"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_JSuAsAMoEeOU3KrLjtP7iQ" name="endOfBooksListDeliverRoleEvent" signal="_T2C1gAMoEeOU3KrLjtP7iQ"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_T2C1gAMoEeOU3KrLjtP7iQ" name="endOfBooksListDeliverRoleSignal"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_bmYsRAOfEeOIzpE8gXDnPg" name="endOfBookCheckerRoleEvent" signal="_iD47MAOfEeOIzpE8gXDnPg"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_iD47MAOfEeOIzpE8gXDnPg" name="endOfBookCheckerRoleSignal"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qQRGwAOfEeOIzpE8gXDnPg" name="endOfResultsDeliverRoleEvent" signal="_wVCFkAOfEeOIzpE8gXDnPg"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_wVCFkAOfEeOIzpE8gXDnPg" name="endOfResultsDeliverRoleSignal"/>
+    <profileApplication xmi:id="_0afmQAN3EeOIzpE8gXDnPg">
+      <eAnnotations xmi:id="_0bivIAN3EeOIzpE8gXDnPg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="PIMM.profile.uml#_a_f58AN0EeO2-74KUwC_1Q"/>
+      </eAnnotations>
+      <appliedProfile href="PIMM.profile.uml#_lnEK4O8CEeKiRKIQK4ek3w"/>
+    </profileApplication>
+  </uml:Model>
+  <PIMM_Profile:Group xmi:id="_U7zw4P3cEeKnzsDD7fTfsA" base_Class="_LMkvoP3VEeKnzsDD7fTfsA">
+    <roles xmi:type="xsd:anyType" href="#_V_whMP3cEeKnzsDD7fTfsA"/>
+    <roles xmi:type="xsd:anyType" href="#_W5bUIP3cEeKnzsDD7fTfsA"/>
+    <roles xmi:type="xsd:anyType" href="#_X3Q1YP3cEeKnzsDD7fTfsA"/></PIMM_Profile:Group>
+  <PIMM_Profile:Role xmi:id="_V_whMP3cEeKnzsDD7fTfsA" base_Class="_MiQJIP3VEeKnzsDD7fTfsA">
+    <itsGroup xmi:type="xsd:anyType" href="#_U7zw4P3cEeKnzsDD7fTfsA"/>
+    <itsBehavior xmi:id="_n4608P35EeKXpecBAjC3rg" name="BooksListDeliverSM"/></PIMM_Profile:Role>
+  <PIMM_Profile:Role xmi:id="_W5bUIP3cEeKnzsDD7fTfsA" interactsWith="_V_whMP3cEeKnzsDD7fTfsA" base_Class="_MK280P3VEeKnzsDD7fTfsA">
+    <itsGroup xmi:type="xsd:anyType" href="#_U7zw4P3cEeKnzsDD7fTfsA"/></PIMM_Profile:Role>
+  <PIMM_Profile:Role xmi:id="_X3Q1YP3cEeKnzsDD7fTfsA" base_Class="_LsKOoP3VEeKnzsDD7fTfsA">
+    <itsGroup xmi:type="xsd:anyType" href="#_U7zw4P3cEeKnzsDD7fTfsA"/>
+    <itsBehavior xmi:id="_y1a-wP35EeKXpecBAjC3rg" name="ResultsDeliverSM"/></PIMM_Profile:Role>
+  <PIMM_Profile:Site xmi:id="_Y4iFIP3cEeKnzsDD7fTfsA" base_Class="_N1QCEP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile:Agent xmi:id="_atNHwP3cEeKnzsDD7fTfsA" mayPlay="_V_whMP3cEeKnzsDD7fTfsA" base_Class="_O-Q4kP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile:DomainConcept xmi:id="_b8VNUP3cEeKnzsDD7fTfsA" transfearable="true" base_Class="_NbeQIP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile:DomainConcept xmi:id="_cx-b4P3cEeKnzsDD7fTfsA" transfearable="true" base_Class="_NBGBQP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile:MobileAgent xmi:id="_UtCmAP3lEeKXpecBAjC3rg" mayPlay="_W5bUIP3cEeKnzsDD7fTfsA _X3Q1YP3cEeKnzsDD7fTfsA" base_Class="_OOu5EP3VEeKnzsDD7fTfsA">
+    <itsBehavior xmi:id="_9q7IsP35EeKXpecBAjC3rg" name="MobileBookSeekerSM"/></PIMM_Profile:MobileAgent>
+  <PIMM_Profile:Role xmi:id="_PjZGcP33EeKXpecBAjC3rg" base_Class="_MiQJIP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile:Role xmi:id="_Pk4UMP33EeKXpecBAjC3rg" base_Class="_MK280P3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile:Role xmi:id="_PlxsEP33EeKXpecBAjC3rg" base_Class="_LsKOoP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile_1:Role xmi:id="_N0pBIP9hEeKsuqKZA0ha9A"/>
+  <PIMM_Profile_1:Role xmi:id="_X9lnEP9hEeKsuqKZA0ha9A"/>
+  <PIMM_Profile_1:Role xmi:id="_Y2zuEP9hEeKsuqKZA0ha9A"/>
+  <PIMM_Profile_2:AfterMigration xmi:id="_UYB8sAMyEeOU3KrLjtP7iQ"/>
+  <PIMM_Profile_2:AfterMigration xmi:id="_u5PrkAN0EeO2-74KUwC_1Q"/>
+  <PIMM_Profile_2:AfterMigration xmi:id="_x5d7UAN0EeO2-74KUwC_1Q"/>
+  <PIMM_Profile_2:AfterMigration xmi:id="_9aCbgAN0EeO2-74KUwC_1Q"/>
+  <PIMM_Profile_1:Group xmi:id="_1ev4kAN3EeOIzpE8gXDnPg" base_Class="_LMkvoP3VEeKnzsDD7fTfsA">
+    <roles href="#_2dn7oAN3EeOIzpE8gXDnPg"/>
+    <roles href="#_3SE3YAN3EeOIzpE8gXDnPg"/>
+    <roles href="#_4NiaEAN3EeOIzpE8gXDnPg"/>
+  </PIMM_Profile_1:Group>
+  <PIMM_Profile_1:Role xmi:id="_2dn7oAN3EeOIzpE8gXDnPg" base_Class="_MiQJIP3VEeKnzsDD7fTfsA" itsBehavior="_AyWaEP9iEeKsuqKZA0ha9A">
+    <itsGroup href="#_1ev4kAN3EeOIzpE8gXDnPg"/>
+  </PIMM_Profile_1:Role>
+  <PIMM_Profile_1:Role xmi:id="_3SE3YAN3EeOIzpE8gXDnPg" interactsWith="_2dn7oAN3EeOIzpE8gXDnPg" base_Class="_MK280P3VEeKnzsDD7fTfsA" itsBehavior="_0CqbYP9hEeKsuqKZA0ha9A">
+    <itsGroup href="#_1ev4kAN3EeOIzpE8gXDnPg"/>
+  </PIMM_Profile_1:Role>
+  <PIMM_Profile_1:Role xmi:id="_4NiaEAN3EeOIzpE8gXDnPg" base_Class="_LsKOoP3VEeKnzsDD7fTfsA" itsBehavior="_poI9QP9hEeKsuqKZA0ha9A">
+    <itsGroup href="#_1ev4kAN3EeOIzpE8gXDnPg"/>
+  </PIMM_Profile_1:Role>
+  <PIMM_Profile_1:Agent xmi:id="_7S0wAAN3EeOIzpE8gXDnPg" mayPlay="_2dn7oAN3EeOIzpE8gXDnPg" base_Class="_O-Q4kP3VEeKnzsDD7fTfsA" itsBehavior="_Md8egP9iEeKsuqKZA0ha9A"/>
+  <PIMM_Profile_1:Site xmi:id="_8LdBIAN3EeOIzpE8gXDnPg" base_Class="_N1QCEP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile_1:MobileAgent xmi:id="_9uF4kAN3EeOIzpE8gXDnPg" mayPlay="_3SE3YAN3EeOIzpE8gXDnPg _4NiaEAN3EeOIzpE8gXDnPg" base_Class="_OOu5EP3VEeKnzsDD7fTfsA" itsBehavior="_a05V8P9iEeKsuqKZA0ha9A"/>
+  <PIMM_Profile_1:DomainConcept xmi:id="__MH80AN3EeOIzpE8gXDnPg" transfearable="true" base_Class="_NBGBQP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile_1:DomainConcept xmi:id="_ACztMAN4EeOIzpE8gXDnPg" transfearable="true" base_Class="_NbeQIP3VEeKnzsDD7fTfsA"/>
+  <PIMM_Profile_1:DomainAction xmi:id="_BonX8AN5EeOIzpE8gXDnPg" base_Action="_TdDvQP9uEeKsuqKZA0ha9A"/>
+  <PIMM_Profile_1:SendMessage xmi:id="_e4U2kAN9EeOIzpE8gXDnPg" base_SendSignalAction="_c9wTUP93EeKsuqKZA0ha9A"/>
+  <PIMM_Profile_1:DomainAction xmi:id="_eXlEgAN-EeOIzpE8gXDnPg" base_Action="_DNaC0AJ5EeOU3KrLjtP7iQ"/>
+  <PIMM_Profile_1:ReceiveMessage xmi:id="_3tkcYAN-EeOIzpE8gXDnPg" base_SignalEvent="_AVigQP94EeKsuqKZA0ha9A" itsPreviousSend="_e4U2kAN9EeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:SendMessage xmi:id="_HlXFYAOIEeOIzpE8gXDnPg" base_SendSignalAction="_zMAUYAJ7EeOU3KrLjtP7iQ" itsPreviousReceive="_i1_lAAOIEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:ReceiveMessage xmi:id="_i1_lAAOIEeOIzpE8gXDnPg" base_SignalEvent="_dbYEMAJ8EeOU3KrLjtP7iQ"/>
+  <PIMM_Profile_1:JoinGroup xmi:id="_6QEX4AOKEeOIzpE8gXDnPg" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_DgpU0AKuEeOU3KrLjtP7iQ"/>
+  <PIMM_Profile_1:RequestRole xmi:id="_N4YbQAOLEeOIzpE8gXDnPg" role="_2dn7oAN3EeOIzpE8gXDnPg" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_zFxaMAMjEeOU3KrLjtP7iQ"/>
+  <PIMM_Profile_1:ActivateRole xmi:id="_hiVdYAOLEeOIzpE8gXDnPg" role="_2dn7oAN3EeOIzpE8gXDnPg" base_Action="_r_KucAMkEeOU3KrLjtP7iQ"/>
+  <PIMM_Profile_1:LeaveGroup xmi:id="_td4CUAOLEeOIzpE8gXDnPg" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_KgtlMAMlEeOU3KrLjtP7iQ"/>
+  <PIMM_Profile_1:EndRole xmi:id="_4u8G4AOLEeOIzpE8gXDnPg" base_SignalEvent="_JSuAsAMoEeOU3KrLjtP7iQ" role="_2dn7oAN3EeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:AfterMigration xmi:id="_oYwtMAOMEeOIzpE8gXDnPg" base_Action="_ocoNcAN0EeO2-74KUwC_1Q" neededWork="_yHzv8AONEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:JoinGroup xmi:id="_Am8j8AOXEeOIzpE8gXDnPg" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_zwP-UAOWEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:RequestRole xmi:id="_ybvFoAOaEeOIzpE8gXDnPg" role="_3SE3YAN3EeOIzpE8gXDnPg" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_oS8QsAOaEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:RequestRole xmi:id="_L1mQ4AObEeOIzpE8gXDnPg" role="_4NiaEAN3EeOIzpE8gXDnPg" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_E6lmkAObEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:ActivateRole xmi:id="_riIeoAOcEeOIzpE8gXDnPg" role="_3SE3YAN3EeOIzpE8gXDnPg" base_Action="_kfqhcAOcEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:ActivateRole xmi:id="_LpcZUAOdEeOIzpE8gXDnPg" role="_4NiaEAN3EeOIzpE8gXDnPg" base_Action="_FUbYAAOdEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:Migration xmi:id="_DWi5kAOeEeOIzpE8gXDnPg" site="_8LdBIAN3EeOIzpE8gXDnPg" base_Action="_9JIVEAOdEeOIzpE8gXDnPg" neededWork="_yb3EoAOeEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:LeaveGroup xmi:id="_kNjL0AOeEeOIzpE8gXDnPg" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_aCqsMAOeEeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:EndRole xmi:id="_NSmBEAOgEeOIzpE8gXDnPg" base_SignalEvent="_bmYsRAOfEeOIzpE8gXDnPg" role="_3SE3YAN3EeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:EndRole xmi:id="_RQW3IAOgEeOIzpE8gXDnPg" base_SignalEvent="_qQRGwAOfEeOIzpE8gXDnPg" role="_4NiaEAN3EeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:DomainAction xmi:id="_0y454AQAEeOjlppfMwSWqA" base_Action="_kRDfQAQAEeOjlppfMwSWqA"/>
+  <PIMM_Profile_1:LeaveGroup xmi:id="_2zVHoAQAEeOjlppfMwSWqA" group="_1ev4kAN3EeOIzpE8gXDnPg" base_Action="_tuV5EAQAEeOjlppfMwSWqA"/>
+  <PIMM_Profile_1:DomainAction xmi:id="_jyO_0AQBEeOjlppfMwSWqA" base_Action="_bmd4QAQBEeOjlppfMwSWqA"/>
+  <PIMM_Profile_1:DomainAction xmi:id="_5ZMyIAQKEeOjlppfMwSWqA" base_Action="_swEHYAQKEeOjlppfMwSWqA"/>
+  <PIMM_Profile_1:Jump xmi:id="_LwAKUAQLEeOjlppfMwSWqA" base_Action="_EMA0cAQLEeOjlppfMwSWqA" site="_8LdBIAN3EeOIzpE8gXDnPg"/>
+  <PIMM_Profile_1:DomainAction xmi:id="_KXhfAAQMEeOjlppfMwSWqA" base_Action="_8cu_IAQLEeOjlppfMwSWqA"/>
+  <PIMM_Profile_1:DomainAction xmi:id="_L9v18AQMEeOjlppfMwSWqA" base_Action="_DNBAIAQMEeOjlppfMwSWqA"/>
+  <PIMM_Profile_1:SendMessage xmi:id="_CgOtwB2WEeOc8pvy6RLTMA" base_SendSignalAction="_xRr-IB2VEeOc8pvy6RLTMA"/>
+  <PIMM_Profile_1:SendMessage xmi:id="_PjLKMB2XEeOc8pvy6RLTMA" base_SendSignalAction="_EPt48B2XEeOc8pvy6RLTMA"/>
+  <PIMM_Profile_1:SendMessage xmi:id="_7E8WAB2XEeOc8pvy6RLTMA" base_SendSignalAction="_wSkYkB2XEeOc8pvy6RLTMA"/>
+</xmi:XMI>
